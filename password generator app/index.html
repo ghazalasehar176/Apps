@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css link -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- font-awesom cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <!-- first-div -->
+    <div class="box-one">
+        <div class="first-col">
+            <h1>Javascript</h1>
+            <span>
+                <i class="fas fa-key"></i>
+                <h2>Password Generator</h2>
+            </span>
+        </div>
+    </div>
+
+    <!-- second-div -->
+    <div class="box-two ">
+
+        <div class="second-col">
+            <h1>Password Generator</h1>
+            <div class="line-div"></div>
+        </div>
+
+
+        <div class="input-feild">
+            <input type="text" class="password-feild" id="password" readonly>
+            <i class="fa-solid fa-copy" onclick="copyPassword()"></i>
+            <p id="msg"></p>
+        </div>
+
+        <div class="options">
+            <!-- include password length -->
+            <div class="row">
+                <label for="length">Password Length</label>
+                <input type="range" id="length" min="6" max="24" value="12" oninput="updateLengthValue(this.value)">
+                <span id="lengthValue">12</span>
+            </div>
+            <!-- Include UpperCase -->
+            <div class="row">
+                <label for="uppercase">Include UpperCase</label>
+                <input type="checkbox" id="uppercase" class="inputs">
+            </div>
+            <!-- Include LowerCase -->
+            <div class="row">
+                <label for="lowercase">Include LowerCase</label>
+                <input type="checkbox" id="lowercase" class="inputs">
+            </div>
+            <!-- Include Number -->
+            <div class="row">
+                <label for="number">Include Number</label>
+                <input type="checkbox" id="number" class="inputs">
+            </div>
+            <!-- Include Symbol -->
+            <div class="row">
+                <label for="symbol">Include Symbol</label>
+                <input type="checkbox" id="symbol" class="inputs">
+            </div>
+        </div>
+
+        <!-- Generate password button -->
+        <button class="password_btn" onclick="generatePassword()"><i class="fa-solid fa-key"></i>Generate Password</button>
+
+    </div>
+
+
+
+</body>
+</html>
+
+  <!-- javascript link -->
+   <script src="index.js"></script>

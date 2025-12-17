@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(239, 114, 239), rgb(220, 90, 220), rgb(200, 60, 200));
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.box-one {
+    width: 40%;
+    height: 550px;
+    background: linear-gradient(135deg, rgb(239, 114, 239), rgb(190, 70, 190), rgb(150, 40, 150));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.first-col h1 {
+    color: #ffd700;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    text-decoration: underline;
+    margin-left: 30px;
+}
+
+.first-col span i {
+    color: #f5f5f5;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+}
+
+.first-col h2 {
+    color: #f5f5f5;
+    position: relative;
+    bottom: 47px;
+    left: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+}
+
+.second-col h1 {
+    color: #ffd700;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.second-col .line-div {
+    width: 50%;
+    height: 4px;
+    background-color: #f5f5f5;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+
+
+/* box-two */
+.box-two {
+    width: 40%;
+    height: 550px;
+    background: linear-gradient(135deg, rgb(239, 114, 239), rgb(190, 70, 190), rgb(150, 40, 150));
+    color: white;
+    border-radius: 10px;
+}
+.second-col{
+    margin-top: 100px;
+}
+.input-feild .password-feild {
+    height: 30px;
+    width: 40%;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.input-feild i {
+    position: relative;
+    right: 30px;
+    font-size: 15px;
+    color: #b89d00;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#msg {
+    color: #feda0d;
+    font-size: 14px;
+    position: relative;
+    top: -33px;
+    margin-left: 75%;
+}
+
+.options {
+    width: 70%;
+    padding: 15px;
+    margin: 20px auto;
+    background-color: #ffa500;
+    border-radius: 15px;
+}
+
+.options .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.options label {
+    flex: 1;
+}
+
+.password_btn {
+    color: #fff;
+    margin-left: 150px;
+    background: linear-gradient(135deg, #ffa500, #ffd700, #ef72ef, #962896);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 2px #ffd700;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.password_btn:hover {
+    background: linear-gradient(135deg, #962896, #ef72ef, #ffd700, #ffa500);
+    color: #f5f5f5;
+    transform: scale(1.04);
+}
+
+/* --------- Responsive Design --------- */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .box-one,
+    .box-two {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .input-feild .password-feild {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .password_btn {
+        margin-left: 35%;
+    }
+}
+
+/* Mobiles (max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .box-one,
+    .box-two {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .first-col h1 {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .first-col h2 {
+        font-size: 18px;
+        left: 0;
+        bottom: 0;
+    }
+
+    .input-feild .password-feild {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .input-feild i {
+        right: 15px;
+        font-size: 18px;
+    }
+
+    #msg {
+        font-size: 12px;
+        top: -25px;
+        margin-left: 60%;
+    }
+
+    .options {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .password_btn {
+        margin-left: 25%;
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+
