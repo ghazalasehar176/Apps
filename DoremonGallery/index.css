@@ -1,0 +1,203 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #000;
+}
+
+#parent-circle {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+.circle {
+    display: flex;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    margin: -8%;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+
+}
+
+.circle:hover {
+    transform: rotate(var(--angle)) translate(16vw) rotate(calc(-1 * var(--angle)));
+}
+
+.blue {
+    --angle: 0deg;
+    transform: rotate(var(--angle)) translate(16vw) rotate(calc(-1 * var(--angle)));
+    background-color: #00ADEF;
+    background-image: url(image/doremon.png);
+}
+
+.pink {
+    --angle: 51.42deg;
+    transform: rotate(var(--angle)) translate(16vw) rotate(calc(-1 * var(--angle)));
+    background-color: #FFD54F;
+    background-image: url(image/nobita.png);
+}
+
+.lime {
+    --angle: 102.84deg;
+    transform: rotate(var(--angle)) translate(16vw) rotate(calc(-1 * var(--angle)));
+    background-color: #FF80AB;
+    color: black;
+    background-image: url(image/shizuka.png);
+}
+
+.orange {
+    --angle: 154.26deg;
+    transform: rotate(var(--angle)) translate(16vw) rotate(calc(-1 * var(--angle)));
+    background-color: #ff8a00;
+    background-image: url(image/suneo.png);
+}
+
+.teal {
+    --angle: 205.68deg;
+    transform: rotate(var(--angle)) translate(16vw) rotate(calc(-1 * var(--angle)));
+    background-color: #FFF200;
+    background-image: url(image/dorami.png);
+}
+
+.black {
+    --angle: 257.1deg;
+    transform: rotate(var(--angle)) translate(16vw) rotate(calc(-1 * var(--angle)));
+    background-color: #FF5722;
+    background-image: url(image/takeshi.png);
+}
+
+.purple {
+    --angle: 308.52deg;
+    transform: rotate(var(--angle)) translate(16vw) rotate(calc(-1 * var(--angle)));
+    background-color: #8E24AA;
+    background-image: url(image/tomako.png);
+}
+
+.center-box.blue h2 {
+    color: #fc4444;
+}
+
+.center-box.blue p {
+    color: #fff;
+}
+
+.center-box.pink h2 {
+    color: #fff;
+}
+
+.center-box.pink p {
+    color: #ea7676;
+}
+
+.center-box.lime h2 {
+    color: #fc4444;
+}
+
+.center-box.lime p {
+    color: #fff;
+}
+
+.center-box.orange h2 {
+    color: #fff;
+}
+
+.center-box.orange p {
+    color: #FFF200;
+}
+
+.center-box.teal h2 {
+    color: #FF8A00;
+}
+
+.center-box.teal p {
+    color: #fc4444;
+}
+
+.center-box.black h2 {
+    color: #FFF200;
+}
+
+.center-box.black p {
+    color: #fff;
+}
+
+.center-box.purple h2 {
+    color: #fff;
+}
+
+.center-box.purple p {
+    color: #FFF200;
+}
+
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 15vw;
+    height: 15vw;
+    background-color: #111;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1vw;
+    border-radius: 1vw;
+    border: .15vw solid #444;
+    color: white;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.center-box img {
+    width: 10vw;
+    height: 6vw;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 0.5vw;
+}
+
+.center-box h2 {
+    font-size: 1vw;
+    margin: 0.3vw 0;
+}
+
+#char-info {
+    font-size: 0.80vw;
+    line-height: 1vw;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
